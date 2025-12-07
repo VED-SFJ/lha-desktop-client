@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Fingerprint, Lock, ChevronRight, AlertCircle } from 'lucide-react';
-import ForgotPasswordModal from './modals/ForgotPasswordModal'; // Import
+import ForgotPasswordModal from '../../components/modals/ForgotPasswordModal'; 
 
 const Login = ({ onLogin, onGoRegister }) => {
   const [loading, setLoading] = useState(false);

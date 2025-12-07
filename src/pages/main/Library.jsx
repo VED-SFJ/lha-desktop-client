@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Search, Filter, Star } from 'lucide-react';
-import { COMICS } from '../data/mockData';
+import { COMICS } from '../../data/mockData';
 
 const Library = ({ onNavigate }) => {
   const [filter, setFilter] = useState('All');

@@ -5,7 +5,7 @@ const Sidebar = ({ activeTab, setActiveTab, user }) => {
   const menuItems = [
     { id: 'dashboard', icon: LayoutDashboard, label: 'Mainframe' },
     { id: 'library', icon: BookOpen, label: 'Archives' },
-    { id: 'community', icon: Globe, label: 'Hub' }, // Changed Icon to Globe for "Hub"
+    { id: 'community', icon: Globe, label: 'Hub' }, 
     { id: 'theater', icon: MonitorPlay, label: 'Theater' },
   ];
 

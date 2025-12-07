@@ -1,6 +1,6 @@
 import React from 'react';
 import { Play, Clock, TrendingUp, Trophy } from 'lucide-react';
-import { COMICS, CURRENT_USER } from '../data/mockData';
+import { COMICS, CURRENT_USER } from '../../data/mockData';
 
 const Dashboard = ({ onNavigate }) => {
   return (

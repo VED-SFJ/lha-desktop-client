@@ -2,32 +2,31 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 
-// We use built-in app.isPackaged instead of 'electron-is-dev' to avoid import errors
 const isDev = !app.isPackaged;
 
 function createWindow() {
   const mainWindow = new BrowserWindow({
     width: 1280,
     height: 800,
-    frame: false, // Frameless Cyberpunk window
-    backgroundColor: '#0a0a0a',
+    minWidth: 1024,
+    minHeight: 700,
+    frame: false,
+    backgroundColor: '#0a0a0a', // Matches body bg
+    show: false, // Don't show until ready
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
-      // Security: Enable remote module if needed, but keeping it simple for now
       enableRemoteModule: true,
     },
   });
 
-  // Load Vite dev server if in dev mode, otherwise load build files
   const startURL = 'http://localhost:5173';
-  
-  // If you ever build for production, use this:
-  // const startURL = isDev 
-  //   ? 'http://localhost:5173' 
-  //   : `file://${path.join(__dirname, '../dist/index.html')}`;
-
   mainWindow.loadURL(startURL);
+
+  // Wait until content is loaded to show window (prevents white flash)
+  mainWindow.once('ready-to-show', () => {
+    mainWindow.show();
+  });
 }
 
 app.whenReady().then(createWindow);

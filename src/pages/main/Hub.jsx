@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Search, ShoppingBag, Calendar, Users, MessageSquare, Plus } from 'lucide-react';
-import { CHATS, MARKET_ITEMS, EVENTS, GUILDS } from '../data/mockData';
-import ChatWindow from './ChatWindow';
-import CreatePostModal from './modals/CreatePostModal';
+import { CHATS, MARKET_ITEMS, EVENTS, GUILDS } from '../../data/mockData';
+import ChatWindow from '../../components/chat/ChatWindow';
+import CreatePostModal from '../../components/modals/CreatePostModal';
 
 const Hub = ({ onOpenDetail }) => {
   const [activeTab, setActiveTab] = useState('chat'); // chat, market, events, guilds

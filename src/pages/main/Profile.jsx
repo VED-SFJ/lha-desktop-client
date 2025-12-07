@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Settings, Edit, LogOut, Shield, Bell, HardDrive, HelpCircle, ChevronLeft } from 'lucide-react';
-import { CURRENT_USER } from '../data/mockData';
-import BadgeModal from './modals/BadgeModal'; // Import
-import { DataStorageView, PrivacyView, HelpView } from './SettingsViews'; // Import
+import { Settings, Edit, LogOut, Shield, Bell, HardDrive, HelpCircle } from 'lucide-react';
+import { CURRENT_USER } from '../../data/mockData';
+import BadgeModal from '../../components/modals/BadgeModal'; 
+import { DataStorageView, PrivacyView, HelpView } from '../../components/layout/SettingsViews'; 
 
 const Profile = ({ onLogout, onEditProfile }) => {
   const [view, setView] = useState('overview'); // overview, settings, data, privacy, help
